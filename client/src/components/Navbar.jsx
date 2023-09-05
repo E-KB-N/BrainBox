@@ -4,20 +4,18 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   function handleNavLinkClick() {
     setOpen(false);
   }
-
-
 
   return (
     <header className="w-full fixed left-0 z-[100] top-0 bg-zinc-600">
       <nav className="w-full flex items-center justify-between bg-white h-24 md:px-10 px-7 max-w-[1444px] my-0 mx-auto">
         <NavLink to={`/`}>
           <h1 className="cursor-pointer text-primary text-2xl font-semibold">
-          BrainBox
+            BrainBox
           </h1>
         </NavLink>
 
@@ -57,12 +55,12 @@ const Navbar = () => {
                 }
                 onClick={handleNavLinkClick}
               >
-              COURSES
+                COURSES
               </NavLink>
             </li>
             <li className="md:ml-8 md:my-0 my-7 font-black text-xs">
               <NavLink
-                to="/pricing"
+                to="/recommend"
                 className={
                   scroll
                     ? " hover:text-primary duration-500 ease heading nav-link "
@@ -73,7 +71,6 @@ const Navbar = () => {
                 RECOMMEND
               </NavLink>
             </li>
-            
           </ul>
         </div>
 

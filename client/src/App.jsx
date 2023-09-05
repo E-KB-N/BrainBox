@@ -14,22 +14,24 @@ import Level100 from "./pages/Level100/Level100";
 import Level200 from "./pages/Level200/Level200";
 import Level300 from "./pages/Level300/Level300";
 import Level400 from "./pages/Level400/Level400";
+import RecommendPage from "./components/Recommend";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="all-courses" element={<Allcourse />} />
-        <Route path="/level100" element={<Level100 />} />
-        <Route path="/level200" element={<Level200 />} />
-        <Route path="/level300" element={<Level300 />} />
-        <Route path="/level400" element={<Level400 />} />
-      </Route>
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="all-courses" element={<Allcourse />} />
+          <Route path="/level100" element={<Level100 />} />
+          <Route path="/level200" element={<Level200 />} />
+          <Route path="/level300" element={<Level300 />} />
+          <Route path="/level400" element={<Level400 />} />
+          <Route path="/recommend" element={<RecommendPage />} />
+        </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </>
     )
   );
