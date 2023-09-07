@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {hello, submit_interest} from "../../apiService"
+
 
 const RecommendPage = () => {
   const [interests, setInterests] = useState("");
   const [course, setCourse] = useState("");
   const [careerGoal, setCareerGoal] = useState("");
   const [level, setLevel] = useState("");
+  const [items, setItems] = useState([])
 
+
+  useEffect(() => {
+    // Fetch data from the API when the component mounts
+    hello()
+      .then((response) => {
+        setItems(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform recommendation logic based on the entered data
@@ -14,11 +28,28 @@ const RecommendPage = () => {
     console.log("Recommendation logic goes here...");
   };
 
+  const handleCareer = () =>{
+      submit_interest({
+        degree_program : course,
+        career_choice : careerGoal,
+        level : level,
+        interest : interests
+      }).then((response) =>{
+        console.log("Done")
+        console.log(response.data)
+      })
+      .catch ((error) =>{
+        console.log("There was a problem ",error)
+      })
+
+  }
+
   return (
     <div className="min-h-screen w-full bg-gray-100 flex justify-center items-center">
       <form
         onSubmit={handleSubmit}
         className="w-[700px] p-6 bg-white rounded-md shadow-md"
+        method="POST"
       >
         <h1 className="text-2xl font-semibold mb-6">Select Career</h1>
 
@@ -251,10 +282,12 @@ const RecommendPage = () => {
         <button
           type="submit"
           className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          onClick={handleCareer}
         >
           Get Recommendation
         </button>
       </form>
+      <p>{console.log(items.message)}</p>
     </div>
   );
 };
