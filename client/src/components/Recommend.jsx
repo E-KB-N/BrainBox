@@ -8,7 +8,7 @@ const RecommendPage = () => {
   const [careerGoal, setCareerGoal] = useState("");
   const [level, setLevel] = useState("");
   const [items, setItems] = useState([])
-
+  const [recommendations, setRecommendations] = useState([]);
 
   useEffect(() => {
     // Fetch data from the API when the component mounts
@@ -22,10 +22,12 @@ const RecommendPage = () => {
   }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform recommendation logic based on the entered data
-    // You can use the state values of fullName, course, careerGoal, and level to generate recommendations
-    // Display or process the recommendations here
-    console.log("Recommendation logic goes here...");
+    
+
+    
+    const generatedRecommendations = [];
+    
+    setRecommendations(generatedRecommendations);
   };
 
   const handleCareer = () =>{
@@ -36,7 +38,8 @@ const RecommendPage = () => {
         interest : interests
       }).then((response) =>{
         console.log("Done")
-        console.log(response.data)
+        console.log(response.data["RC"][0])
+        setRecommendations(response.data["RC"])
       })
       .catch ((error) =>{
         console.log("There was a problem ",error)
@@ -285,11 +288,28 @@ const RecommendPage = () => {
           onClick={handleCareer}
         >
           Get Recommendation
-        </button>
+          </button>
       </form>
-      <p>{console.log(items.message)}</p>
+      {/* <p>{console.log(items.message)}</p> */}
+
+      {/* Display recommendations */}
+      {recommendations.length > 0 && (
+        <div className="mt-4">
+          <h2 className="text-xl font-semibold">Recommendations:</h2>
+          <ul>
+            {recommendations.map((recommendation, index) => (
+              <li key={index}>{recommendation}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
 
 export default RecommendPage;
+
+
+
+
+
