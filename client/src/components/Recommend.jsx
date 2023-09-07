@@ -5,14 +5,18 @@ const RecommendPage = () => {
   const [course, setCourse] = useState("");
   const [careerGoal, setCareerGoal] = useState("");
   const [level, setLevel] = useState("");
+  const [recommendations, setRecommendations] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform recommendation logic based on the entered data
-    // You can use the state values of fullName, course, careerGoal, and level to generate recommendations
-    // Display or process the recommendations here
-    console.log("Recommendation logic goes here...");
+    
+
+    
+    const generatedRecommendations = [];
+    
+    setRecommendations(generatedRecommendations);
   };
+
 
   return (
     <div className="min-h-screen w-full bg-gray-100 flex justify-center items-center">
@@ -253,10 +257,27 @@ const RecommendPage = () => {
           className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >
           Get Recommendation
-        </button>
+          </button>
       </form>
+
+      {/* Display recommendations */}
+      {recommendations.length > 0 && (
+        <div className="mt-4">
+          <h2 className="text-xl font-semibold">Recommendations:</h2>
+          <ul>
+            {recommendations.map((recommendation, index) => (
+              <li key={index}>{recommendation}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
 
 export default RecommendPage;
+
+
+
+
+
