@@ -1,4 +1,4 @@
-import level400 from "../../data/level200data";
+import level400 from "../../data/level400data";
 import { Link } from "react-router-dom";
 
 const Level400 = () => {
@@ -6,13 +6,19 @@ const Level400 = () => {
     <section className="py-20">
       <div className="max-w-[1444px] w-full my-0 mx-auto py-8 md:px-10 px-3">
         <div className="">
-          <h2 className="mb-4 text-2xl font-bold underline">Level 100</h2>
+          <Link
+            to="/all-courses"
+            className="font-weight text-primary text-3xl mb-8 hover:underline"
+          >
+            Back to All courses
+          </Link>
+          <h2 className="mb-4 text-2xl font-bold underline">Level 400</h2>
           <ul>
             {level400.map((course) => {
               return (
                 <li key={course.id}>
                   <Link
-                    to={`/all-courses/${course.id}`}
+                    to={`/all-courses/level400/${course.id}`}
                     className="flex items-center gap-4 mb-4"
                   >
                     <span className="font-semibold">{course.uniqueCode}</span>

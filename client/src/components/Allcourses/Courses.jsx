@@ -25,7 +25,7 @@ const Courses = () => {
             })}
           </div>
           <Link
-            to="/level100"
+            to="/all-courses/level100"
             className="p-4 bg-teal-800 cursor-pointer text-white rounded-lg"
           >
             Level 100 Courses
@@ -46,7 +46,7 @@ const Courses = () => {
           </div>
 
           <Link
-            to="/level200"
+            to="/all-courses/level200"
             className="p-4 bg-teal-800 cursor-pointer text-white rounded-lg"
           >
             Level 200 Courses
@@ -67,7 +67,7 @@ const Courses = () => {
           </div>
 
           <Link
-            to="/level300"
+            to="/all-courses/level300"
             className="p-4 bg-teal-800 cursor-pointer text-white rounded-lg"
           >
             Level 300 Courses
@@ -88,7 +88,7 @@ const Courses = () => {
           </div>
 
           <Link
-            to="/level400"
+            to="/all-courses/level400"
             className="p-4 bg-teal-800 cursor-pointer text-white rounded-lg"
           >
             Level 400 Courses
