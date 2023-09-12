@@ -7,6 +7,7 @@ const Single300Page = () => {
     1: {
       video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
       description: "abcd",
+      title: "abcd",
       subvideos: [
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt"
@@ -15,6 +16,7 @@ const Single300Page = () => {
     2: {
         video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
       description: "abcd",
+      title: "abcd",
       subvideos: [
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt"
@@ -48,7 +50,7 @@ const Single300Page = () => {
         </Link>
         <div className="flex flex-col items-center justify-between">
           <div className="w-full mb-6">
-            <h2 className="text-center font-semibold text-3xl">{pageData.description}</h2>
+            <h2 className="text-center font-semibold text-3xl">{pageData.title}</h2>
             <iframe
               className="w-full aspect-video"
               src={pageData.video}
@@ -62,11 +64,7 @@ const Single300Page = () => {
           <div className="flex items-center w-full justify-between">
             <div className="w-[45%]">
                 <h2>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
-                laboriosam dolore dignissimos placeat! Provident, autem aliquid
-                iste pariatur reiciendis aut, voluptatem maxime esse debitis
-                exercitationem tempora. Dicta autem quos, ad vel temporibus
-                optio quae obcaecati.
+                  {pageData.description}
                 </h2>
             </div>
 

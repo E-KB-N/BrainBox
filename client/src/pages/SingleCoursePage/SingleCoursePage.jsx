@@ -6,7 +6,8 @@ const SingleCoursePage = () => {
   const data = {
     1: {
       video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
-      description: "2023 UGRC 150",
+      title: "2023 UGRC 150",
+      description: "abcd",
       subvideos: [
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
         "https://www.youtube.com/embed/Reb9ISsRd0A?si=_rplTrfH4mHzvNhp",
@@ -17,7 +18,8 @@ const SingleCoursePage = () => {
     },
     2: {
       video: "https://www.youtube.com/embed/Df2aqGtJ1r8?si=l2KWEM0kvJ4pdXbG",
-      description: "DCIT 101 Introduction to Computer Science",
+      title: "DCIT 101 Introduction to Computer Science",
+      description: "abcd",
       subvideos: [
         "https://www.youtube.com/embed/kJ3BOAqc7GU?si=hORDhPP9_1Ir3vnM",
         "https://www.youtube.com/embed/eMZssUbP9yU?si=AHEkFq1C2sLabNTy",
@@ -28,7 +30,8 @@ const SingleCoursePage = () => {
     },
     3: {
       video: "https://www.youtube.com/embed/pnC0xobehvQ?si=QXFZsWKBhblv9kDS",
-      description: "DCIT 103 Office Productivity Tools",
+      title: "DCIT 103 Office Productivity Tools",
+      description: "abcd",
       subvideos: [
         "https://www.youtube.com/embed/kJ3BOAqc7GU?si=hORDhPP9_1Ir3vnM",
         "https://www.youtube.com/embed/eMZssUbP9yU?si=AHEkFq1C2sLabNTy",
@@ -39,7 +42,12 @@ const SingleCoursePage = () => {
     },
     4: {
       video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
+<<<<<<< HEAD
       description: "DCIT 105 Mathematics for IT Professionals",
+=======
+      title: "abcd",
+      description: "abcd",
+>>>>>>> f92ca03c3771b9364bfe63cbba00b3c30cb74dda
       subvideos: [
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
@@ -66,7 +74,7 @@ const SingleCoursePage = () => {
         <div className="flex flex-col items-center justify-between">
           <div className="w-full mb-6">
             <h2 className="text-center font-semibold text-3xl">
-              {pageData.description}
+              {pageData.title}
             </h2>
             <iframe
               className="w-full aspect-video"
@@ -81,11 +89,7 @@ const SingleCoursePage = () => {
           <div className="flex items-center w-full justify-between">
             <div className="w-[45%]">
               <h2>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
-                laboriosam dolore dignissimos placeat! Provident, autem aliquid
-                iste pariatur reiciendis aut, voluptatem maxime esse debitis
-                exercitationem tempora. Dicta autem quos, ad vel temporibus
-                optio quae obcaecati.
+                {pageData.description}
               </h2>
             </div>
 
