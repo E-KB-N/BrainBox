@@ -77,7 +77,7 @@ const Single400Page = () => {
                 return (
                   <iframe
                   className="w-full aspect-auto"
-                    src={pageData.subvideos}
+                    src={vid}
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
