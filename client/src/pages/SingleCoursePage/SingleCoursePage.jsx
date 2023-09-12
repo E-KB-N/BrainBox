@@ -78,7 +78,16 @@ const SingleCoursePage = () => {
             ></iframe>
           </div>
 
-          
+          <div className="flex items-center w-full justify-between">
+            <div className="w-[45%]">
+              <h2>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
+                laboriosam dolore dignissimos placeat! Provident, autem aliquid
+                iste pariatur reiciendis aut, voluptatem maxime esse debitis
+                exercitationem tempora. Dicta autem quos, ad vel temporibus
+                optio quae obcaecati.
+              </h2>
+            </div>
 
             <div className="p-6">
               <h2>Playlist</h2>
