@@ -6,21 +6,38 @@ const SingleCoursePage = () => {
   const data = {
     1: {
       video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
-      description: "abcd",
+      description: "2023 UGRC 150",
       subvideos: [
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
-        "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
+        "https://www.youtube.com/embed/Reb9ISsRd0A?si=_rplTrfH4mHzvNhp",
+        "https://www.youtube.com/embed/mrj81yjiOHY?si=dhaYKVdQ3vg3tzXg",
+        "https://www.youtube.com/embed/vdFsY9YAn4Y?si=jmBCKgmd6l13ngO",
+        "https://www.youtube.com/embed/bM0okF_w12g?si=EEXPMiSKR1LwIGNm",
       ],
     },
     2: {
-      video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
-      description: "abcd",
+      video: "https://www.youtube.com/embed/Df2aqGtJ1r8?si=l2KWEM0kvJ4pdXbG",
+      description: "DCIT 101 Introduction to Computer Science",
       subvideos: [
-        "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
-        "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
+        "https://www.youtube.com/embed/kJ3BOAqc7GU?si=hORDhPP9_1Ir3vnM",
+        "https://www.youtube.com/embed/eMZssUbP9yU?si=AHEkFq1C2sLabNTy",
+        "https://www.youtube.com/embed/-gDqCocTLbU?si=vgzbmz3KqeI9ePhO",
+        "https://www.youtube.com/embed/RC3zXVnSr0g?si=K86_tSvlVlir5m1f",
+        "https://www.youtube.com/embed/-TAdd5urJC4?si=_-jdBezPclpoyLBp",
       ],
     },
     3: {
+      video: "https://www.youtube.com/embed/pnC0xobehvQ?si=QXFZsWKBhblv9kDS",
+      description: "DCIT 103 Office Productivity Tools",
+      subvideos: [
+        "https://www.youtube.com/embed/kJ3BOAqc7GU?si=hORDhPP9_1Ir3vnM",
+        "https://www.youtube.com/embed/eMZssUbP9yU?si=AHEkFq1C2sLabNTy",
+        "https://www.youtube.com/embed/-gDqCocTLbU?si=vgzbmz3KqeI9ePhO",
+        "https://www.youtube.com/embed/RC3zXVnSr0g?si=K86_tSvlVlir5m1f",
+        "https://www.youtube.com/embed/-TAdd5urJC4?si=_-jdBezPclpoyLBp",
+      ],
+    },
+    4: {
       video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
       description: "abcd",
       subvideos: [
@@ -28,14 +45,6 @@ const SingleCoursePage = () => {
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
       ],
     },
-    4: {
-        video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
-        description: "abcd",
-        subvideos: [
-          "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
-          "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
-        ],
-      },
   };
 
   const { id } = useParams();
@@ -69,25 +78,16 @@ const SingleCoursePage = () => {
             ></iframe>
           </div>
 
-          <div className="flex items-center w-full justify-between">
-            <div className="w-[45%]">
-              <h2>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
-                laboriosam dolore dignissimos placeat! Provident, autem aliquid
-                iste pariatur reiciendis aut, voluptatem maxime esse debitis
-                exercitationem tempora. Dicta autem quos, ad vel temporibus
-                optio quae obcaecati.
-              </h2>
-            </div>
+          
 
             <div className="p-6">
-              <h2>Critical Thinking</h2>
+              <h2>Playlist</h2>
               <div className="flex flex-col gap-y-4">
                 {pageData.subvideos.map((vid) => {
                   return (
                     <iframe
                       className="w-full aspect-auto"
-                      src={pageData.subvideos}
+                      src={vid}
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
