@@ -42,12 +42,8 @@ const SingleCoursePage = () => {
     },
     4: {
       video: "https://www.youtube.com/embed/4FIJYu_dwFk?si=rR9n0hKFYr0ZzOE_",
-<<<<<<< HEAD
-      description: "DCIT 105 Mathematics for IT Professionals",
-=======
       title: "abcd",
       description: "abcd",
->>>>>>> f92ca03c3771b9364bfe63cbba00b3c30cb74dda
       subvideos: [
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
         "https://www.youtube.com/embed/OTUXWbSXWwI?si=ezxWIhahGAwfECKt",
